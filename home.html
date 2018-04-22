@@ -45,8 +45,11 @@
             <p>I'm an outgoing person and I could get along with anyone pretty well. I believe that in this short span of life that we own, we should maximize our time trying to get along</p>
             <h3 class="myBirth">My birth place</h3>
             <div id="map"></div>
+            <div class="socialLinks">
+                <a href="social.html"><h3 class="socialL">My Socials</h3></a>
+            </div>
         </div>
-
+        
     </div>
     
     <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
@@ -57,7 +60,6 @@
         <a href="https://www.twitch.tv/touchmenotgw2" class="twitch">twitch</a>
         <a class="copyright">&copy; Ardy Llantino</a>
     </div>
-      
 
       
   </body>
@@ -309,6 +311,31 @@
         margin-top: 30%;
     }
     
+    .socialLinks{
+        font-family: 'Roboto', sans-serif;
+        font-weight: 100;
+        color: dimgrey;
+        float: left;
+        background-color: #fff568;
+        width: 100px;
+        height: 30px;
+        text-align: center;
+        overflow: hidden;
+        margin-top: 10px;
+        transition: transform .3s;
+    }
+    
+    .socialLinks:hover{
+        transform: scale(1.1);        
+    }
+    
+    h3 {
+        font-weight: 400;
+    }
+    
+    .socialL {
+        margin-top: -15px;
+    }
 /*footer section*/
     
     .footer{

@@ -1,0 +1,148 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+            <title>Ardy Llantino</title>
+    </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    
+<body>
+        <div class="yellowBanner">
+            <div class="nav">
+                <a href="home.html" class="left">Home</a>
+                <a class="right ab">About</a>
+                <a href="home.html" class="right work">Work</a>
+            </div>
+            <div class="mainLogo"></div>
+            <h2 class="name">Ardy Llantino</h2>
+            <h3 class="title">Designer</h3>
+        </div>
+<!--Twitch embed-->
+        <div class="socialContent">
+            <h3 class="twitchTitle">TWITCH</h3>
+            <div id="twitch-embed"></div>
+        </div>
+        
+
+</body>
+<style>
+    
+    body {
+            width: 100%;
+            margin: auto;
+        }
+    .yellowBanner {
+        width: 100%;
+        height: 350px;
+        background-color: #fff568;
+        margin-top: auto;
+    }
+    
+    .left {
+        float: left;
+        margin-left: 5%;
+        margin-top: 2%;
+    }
+    
+    .right {
+        float: right;
+        margin-right: 5%;
+        margin-top: 2%;
+    }
+    
+    a {
+        margin: 10px;
+        font-family: 'Roboto', sans-serif;
+        color: dimgrey;
+        text-decoration: none;
+    }
+    
+    a:hover {
+        cursor: pointer;
+        text-decoration: line-through;        
+    }
+    
+    .mainLogo{
+        width: 50px;
+        height: 90px;
+        margin: auto;
+        top: 15%;
+        clear: both;
+        position: relative;
+        background-image: url('img/logo.png');
+        background-size: 50px, auto;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    
+    .name {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 200;
+        letter-spacing: 5.5px;
+        text-align: center;
+        clear: both;
+        position: relative;
+        top: 10%;
+        color: dimgrey;
+    }
+    
+    .title {
+        clear: both;
+        font-family: 'Roboto', sans-serif;
+        letter-spacing: 5px;
+        text-align: center;
+        position: relative;
+        top: 5%;
+        color: dimgrey;
+    }
+/*Twitch*/
+    
+    .socialContent {
+        width: 960px;
+        height: 960px;
+        margin: auto;
+        background: #fff568;
+        margin-top: 25px;
+    }
+        
+    #twitch-embed {
+        margin: 0 auto;
+        margin-left: 203px;
+            
+    }
+    
+    .twitchTitle {
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        color: dimgrey;
+    }
+        
+</style>
+<script type="text/javascript">
+      var embed = new Twitch.Embed("twitch-embed", {
+        width: 554,
+        height: 280,
+        channel: "touchmenotgw2 ",
+        layout: "video",
+        autoplay: false
+      });
+
+      embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
+        var player = embed.getPlayer(832xmp7x8d0vzdp52bfdp5p87ji8lc);
+        player.play();
+      });
+</script>
+<script>
+    $(function () {
+  count = 0;
+  wordsArray = ["Designer", "Problem Solver", "Visionary", "Tinkerer"];
+  setInterval(function () {
+    count++;
+    $(".title").fadeOut(400, function () {
+      $(this).text(wordsArray[count % wordsArray.length]).fadeIn(400);
+    });
+  }, 2000);
+});
+</script>
+</html>
