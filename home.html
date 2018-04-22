@@ -11,6 +11,7 @@
             <div class="nav">
                 <a href="home.html" class="left">Home</a>
                 <a class="right ab">About</a>
+                <a class="right soc">Social</a>
                 <a class="right work">Work</a>
             </div>
             <div class="mainLogo"></div>
@@ -45,12 +46,13 @@
             <p>I'm an outgoing person and I could get along with anyone pretty well. I believe that in this short span of life that we own, we should maximize our time trying to get along</p>
             <h3 class="myBirth">My birth place</h3>
             <div id="map"></div>
-            <div class="socialLinks">
-                <a href="social.html"><h3 class="socialL">My Socials</h3></a>
-            </div>
-        </div>
-        
+        </div>        
     </div>
+    <h2 class="socialL">My Social</h2>
+        <div class="socialLCon">   
+        </div>
+        <script src="www.powr.io/powr.js?external-type=html"></script> 
+        <div class="powr-social-feed" id="b1974867_1524371100"></div>
     
     <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
     
@@ -60,6 +62,7 @@
         <a href="https://www.twitch.tv/touchmenotgw2" class="twitch">twitch</a>
         <a class="copyright">&copy; Ardy Llantino</a>
     </div>
+    
 
       
   </body>
@@ -95,7 +98,7 @@
     }
     
     a {
-        margin: 10px;
+        margin: 5px;
         font-family: 'Roboto', sans-serif;
         color: dimgrey;
         text-decoration: none;
@@ -273,14 +276,14 @@
         margin-right: 40%;
         font-family: 'Roboto', sans-serif;
         color: dimgrey;
-        font-weight: 400;
+        font-weight: 300;
         margin-top: -7%;
     }
     
     .myBirth {
         font-family: 'Roboto', sans-serif;
         color: dimgrey;
-        font-weight: 400;
+        font-weight: 300;
     }
     
     p {
@@ -310,31 +313,23 @@
         text-align: center;
         margin-top: 30%;
     }
-    
-    .socialLinks{
-        font-family: 'Roboto', sans-serif;
-        font-weight: 100;
-        color: dimgrey;
-        float: left;
-        background-color: #fff568;
-        width: 100px;
-        height: 30px;
-        text-align: center;
-        overflow: hidden;
-        margin-top: 10px;
-        transition: transform .3s;
-    }
-    
-    .socialLinks:hover{
-        transform: scale(1.1);        
-    }
-    
-    h3 {
-        font-weight: 400;
-    }
+
+/*Social Links section*/
     
     .socialL {
-        margin-top: -15px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        margin-left: 15px;
+        color: dimgrey;
+        text-align: center;
+        clear: both;
+    }
+    
+    .socialLCon {
+        width: 960px;
+        height: 960px;
+        margin: auto;
+        background-color: #fff568;
     }
 /*footer section*/
     
@@ -544,9 +539,14 @@
     }, 1000);
 });
 
-       $(".ab").click(function() {
+    $(".ab").click(function() {
     $('html, body').animate({
         scrollTop: $(".about").offset().top
+    }, 1000);
+});
+    $(".soc").click(function() {
+    $('html, body').animate({
+        scrollTop: $(".socialL").offset().top
     }, 1000);
 });
     
