@@ -8,11 +8,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <body>
     <div class="yellowBanner">
+            
             <div class="nav">
                 <a href="landingPage.html" class="left">Home</a>
                 <a class="right ab">About</a>
                 <a class="right work">Work</a>
             </div>
+            <div class="burger">
+                <div class="burg"></div>
+                <div class="burg"></div>
+                <div class="burg"></div>
+            </div>
+            
             <div class="mainLogo"></div>
             <h2 class="name">Ardy Llantino</h2>
             <h3 class="title">Designer</h3>
@@ -67,6 +74,27 @@
     body {
         width: 100%;
         margin: auto;
+    }
+
+/*burger!!!!*/
+    
+    .burg {
+    display: none;
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+    }
+    
+    .burger {
+        display: none;
+        margin-left: 5%;
+        margin-top: 3%;
+        position: absolute;
+    }
+    
+    .burger:hover {
+        cursor: pointer;
     }
     
 /*    banner section the one on the top*/
@@ -395,7 +423,21 @@
 /* @Mediam Queries for mobile */
     
 @media only screen and (max-width: 600px){
+    
+    .burg {
+        display: block;
+        background-color: dimgrey;
+        position: relative;
+    }
+    
+    .burger {
+        display: block;
+    }
         
+    .nav {
+        display: none;
+    }
+    
     .selectWork {
         width: 320px;
         height: 1290px;
