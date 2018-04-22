@@ -14,11 +14,18 @@
                 <a class="right ab">About</a>
                 <a class="right work">Work</a>
             </div>
+<!--burger menu-->
             <div class="burger">
                 <div class="burg"></div>
                 <div class="burg"></div>
                 <div class="burg"></div>
             </div>
+            <div class="smolNav">
+                <ul class="smol homer"><a href="landingPage.html">Home</a></ul>
+                <ul class="smol work">Work</ul>
+                <ul class="smol ab">About</ul>
+            </div>
+<!--burber menu^-->
             
             <div class="mainLogo"></div>
             <h2 class="name">Ardy Llantino</h2>
@@ -91,10 +98,17 @@
         margin-left: 5%;
         margin-top: 3%;
         position: absolute;
+        z-index: 100;
     }
     
     .burger:hover {
         cursor: pointer;
+    }
+    
+    .smolNav {
+        font-family: 'Roboto', sans-serif;
+        color: dimgrey;
+        display: none;
     }
     
 /*    banner section the one on the top*/
@@ -433,9 +447,42 @@
     .burger {
         display: block;
     }
+    
+    .smolNav {
+    display: none;
+    text-align: center;
+    width: 100%;
+    height: 300px;
+    background-color: #fff568;
+    z-index: 99;
+    margin: auto;
+    position: absolute;
+    margin-left: -5%;
+    }
+    
+    .smol {
+    margin-top: 5px;
+    font-size: 30px;
+    }
+    
+    .homer {
+    margin-top: 15%;
+    }
+    
+    a:hover {
+    text-decoration: none;
+    }
+    
+    .smol:hover {
+    cursor: pointer;
+    }
         
     .nav {
         display: none;
+    }
+    
+    .yellowBanner {
+    height: 300px;
     }
     
     .selectWork {
@@ -601,6 +648,12 @@
           map: map
         });
       }
+//slideToggle  
+$(document).ready(function(){
+    $(".burger").click(function(){
+        $(".smolNav").slideToggle();
+    });
+});
     
 </script>
 <!--    google maps API-->
