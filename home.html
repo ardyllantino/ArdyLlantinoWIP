@@ -405,15 +405,18 @@
     
     .eMail:hover {
         text-decoration: none;
+        cursor: auto;
     }
     
     .instagram {
         float: left;
+        margin-left: 20px;
         
     }
     
     .twitch {
         float: left;
+        margin-left: 20px;
     }
     
     
@@ -477,6 +480,24 @@
 /* @Mediam Queries for mobile */
     
 @media only screen and (max-width: 600px){
+    
+    .footer {
+        margin-top: 110px;
+    }
+    
+    #myBtn {
+        bottom: 105px;
+    }
+    
+    .eMail {
+        margin-left: 11%;
+    }
+    
+    .copyright {
+        margin: auto;
+        margin-top: 3%;
+        margin-right: 35%;
+    }
     
     .burg {
         display: block;
@@ -660,11 +681,7 @@
         scrollTop: $(".about").offset().top
     }, 1000);
 });
-    $(".soc").click(function() {
-    $('html, body').animate({
-        scrollTop: $(".socialL").offset().top
-    }, 1000);
-});
+    
     
     
 
@@ -679,12 +696,21 @@
             document.getElementById("myBtn").style.display = "none";
         }
     }
-
-    function topFunction() {
-        document.body.scrollTop = 0; // For Safari
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-    }
     
+    $("#myBtn").click(function() {
+    $('html, body').animate({
+        scrollTop: $(".yellowBanner").offset().top
+    }, 1000);
+});
+    
+//      instant top on click
+    
+    
+//    function topFunction() {
+//        document.body.scrollTop = 0; // For Safari
+//        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+//    }
+//    
 //Google Maps JS
     
     function myMap() {
@@ -715,6 +741,8 @@ $(document).ready(function(){
 });
     
 </script>
+    
 <!--    google maps API-->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJ8uUJ3Hh-RmAmh9jdvbcSmaw_ESigkUY&callback=myMap"></script>
+    
 </html>
