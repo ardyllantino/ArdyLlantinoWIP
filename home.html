@@ -41,12 +41,12 @@
       </div>
       
     <div class="selectWork">
-        <div class="shift allW"><h3 class="workTitle">SHIFT</h3><div class="black"></div></div>
-        <div class="detroiteer allW"><h3 class="workTitle">DETROITEER</h3><div class="black"></div></div>
-        <div class="cubus allW"><h3 class="workTitle">CUBUS</h3><div class="black"></div></div>
-        <div class="festivAR allW"><h3 class="workTitle">festivAR</h3><div class="black"></div></div>
-        <div class="personalLogo allW"><h3 class="workTitle">Personal LOGO</h3><div class="black"></div></div>
-        <div class="empireofShadows allW"><h3 class="workTitle">Empire of Shadows</h3><div class="black"></div></div>    
+        <a href="uc.html"><div class="shift allW"><h3 class="workTitle">SHIFT</h3><div class="black"></div></div></a>
+        <a href="uc.html"><div class="detroiteer allW"><h3 class="workTitle">DETROITEER</h3><div class="black"></div></div></a>
+        <a href="uc.html"><div class="cubus allW"><h3 class="workTitle">CUBUS</h3><div class="black"></div></div></a>
+        <a href="uc.html"><div class="festivAR allW"><h3 class="workTitle">festivAR</h3><div class="black"></div></div></a>
+        <a href="uc.html"><div class="personalLogo allW"><h3 class="workTitle">Personal LOGO</h3><div class="black"></div></div></a>
+        <a href="uc.html"><div class="empireofShadows allW"><h3 class="workTitle">Empire of Shadows</h3><div class="black"></div></div></a>  
     </div>
     
     
@@ -141,7 +141,6 @@
     }
     
     a {
-        margin: 5px;
         font-family: 'Roboto', sans-serif;
         color: dimgrey;
         text-decoration: none;
@@ -432,6 +431,7 @@
         width: 100%;
         height: 50px;
         text-align: center;
+        font-weight: 100;
     }
     
     
@@ -440,8 +440,9 @@
     }
     
     .all {
-        color: #fff568;
+        color: black;
         text-decoration: line-through;
+        font-weight: 800;
     }
     
     h {
@@ -589,8 +590,10 @@
     });
     $(".concept").click(function(){
         $(".selector").css("color", "dimgrey",);
-        $(".selector").css("text-decoration", "none",)
-        $(".concept").css("color", "#fff568",);
+        $(".selector").css("font-weight", "100",);
+        $(".selector").css("text-decoration", "none",);
+        $(".concept").css("color", "black",);
+        $(".concept").css("font-weight", "800",);
         $(".concept").css("text-decoration", "line-through",);
     });
 //            all
@@ -599,8 +602,10 @@
     });
     $(".all").click(function(){
         $(".selector").css("color", "dimgrey",);
-        $(".selector").css("text-decoration", "none",)
-        $(".all").css("color", "#fff568",);
+        $(".selector").css("text-decoration", "none",);
+        $(".selector").css("font-weight", "100",);
+        $(".all").css("color", "black",);
+        $(".all").css("font-weight", "800",);
         $(".all").css("text-decoration", "line-through",);
         
     });
@@ -616,8 +621,10 @@
         
     $(".logo").click(function(){
         $(".selector").css("color", "dimgrey",);
-        $(".selector").css("text-decoration", "none",)
-        $(".logo").css("color", "#fff568",);
+        $(".selector").css("text-decoration", "none",);
+        $(".selector").css("font-weight", "100",);
+        $(".logo").css("color", "black",);
+        $(".logo").css("font-weight", "800",);
         $(".logo").css("text-decoration", "line-through",);
     });
 //        Others
@@ -632,8 +639,10 @@
         
     $(".others").click(function(){
         $(".selector").css("color", "dimgrey",);
-        $(".selector").css("text-decoration", "none",)
-        $(".others").css("color", "#fff568",);
+        $(".selector").css("text-decoration", "none",);
+        $(".selector").css("font-weight", "100",);
+        $(".others").css("color", "black",);
+        $(".others").css("font-weight", "800",);
         $(".others").css("text-decoration", "line-through",);
     });
 });
