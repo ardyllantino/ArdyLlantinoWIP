@@ -370,7 +370,7 @@
     
     #map {
         width: 100%;
-        height: 170px;
+        height: 200px;
         background-color: grey;
         float: right;
       }
@@ -678,17 +678,19 @@
     
 //    Google Maps JS
     
-    function initMap() {
-        var uluru = {lat: 15.687502, lng: 120.413456};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 15,
-          center: uluru
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
-      }
+    function myMap() {
+      var myCenter = new google.maps.LatLng(15.689662,120.4143473);
+      var mapCanvas = document.getElementById("map");
+      var mapOptions = {center: myCenter, zoom: 5};
+      var map = new google.maps.Map(mapCanvas, mapOptions);
+      var marker = new google.maps.Marker({position:myCenter});
+      marker.setMap(map);
+
+      var infowindow = new google.maps.InfoWindow({
+        content: "I was born here!"
+      });
+      infowindow.open(map,marker);
+}
 //slideToggle  
 $(document).ready(function(){
     $(".burger").click(function(){
@@ -698,7 +700,5 @@ $(document).ready(function(){
     
 </script>
 <!--    google maps API-->
-<script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9sdMK6Y9RWho4Mt73nDea62IrMDHf1U4&callback=initMap">
-</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJ8uUJ3Hh-RmAmh9jdvbcSmaw_ESigkUY&callback=myMap"></script>
 </html>
