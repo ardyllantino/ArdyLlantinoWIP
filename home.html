@@ -41,12 +41,12 @@
       </div>
       
     <div class="selectWork">
-        <div class="shift allW"><h3 class="workTitle">Shift</h3></div>
-        <div class="detroiteer allW"><h3 class="workTitle">Detroiteer</h3></div>
-        <div class="cubus allW"><h3 class="workTitle">Cubus</h3></div>
-        <div class="festivAR allW"><h3 class="workTitle">FestivAR</h3></div>
-        <div class="personalLogo allW"><h3 class="workTitle">Ardy Llantino</h3></div>
-        <div class="empireofShadows allW"><h3 class="workTitle">Empire of Shadows</h3></div>    
+        <div class="shift allW"><h3 class="workTitle">SHIFT</h3><div class="black"></div></div>
+        <div class="detroiteer allW"><h3 class="workTitle">DETROITEER</h3><div class="black"></div></div>
+        <div class="cubus allW"><h3 class="workTitle">CUBUS</h3><div class="black"></div></div>
+        <div class="festivAR allW"><h3 class="workTitle">festivAR</h3><div class="black"></div></div>
+        <div class="personalLogo allW"><h3 class="workTitle">Personal LOGO</h3><div class="black"></div></div>
+        <div class="empireofShadows allW"><h3 class="workTitle">Empire of Shadows</h3><div class="black"></div></div>    
     </div>
     
     
@@ -206,7 +206,7 @@
     .shift {
         width: 300px;
         height: 215px;
-        background-color: azure;
+        background-image: url(img/shift.png);
         margin: 10px;
         float: left;
         transition: transform .3s;
@@ -217,10 +217,36 @@
         transform: scale(1.1);
     }
     
+    .black {
+        background-color: black;
+        opacity: .75;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        margin-top: -43.5%;
+        transition: opacity .4s;
+    }    
+    
+    .black:hover {
+        opacity: 0;
+    }
+    .allW:hover .workTitle {
+        display: none;
+    }
+    
+    .allW:hover .black {
+        margin-top: 0%;
+    }
+    
+    .allW:hover {
+        position: relative;
+        z-index: 99;
+    }
+    
     .detroiteer {
         width:300px;
         height: 215px;
-        background-color: orange;
+        background-image: url(img/detroiteer.png);
         margin: 10px;
         float: left;
         transition: transform .3s; 
@@ -234,7 +260,7 @@
     .cubus {
         width: 300px;
         height: 215px;
-        background-color: aquamarine;
+        background-image: url(img/cubus.png);
         margin: 10px;
         transition: transform .3s;
         float: left;
@@ -249,7 +275,7 @@
     .festivAR {
         width: 300px;
         height: 215px;
-        background-color: antiquewhite;
+        background-image: url(img/festivAR.png);
         margin: 10px;
         transition: transform .3s;
         float: left;
@@ -263,7 +289,7 @@
     .personalLogo {
         width: 300px;
         height: 215px;
-        background-color: mediumpurple;
+        background-image: url(img/ardyLlantino.png);
         margin: 10px;
         transition: transform .3s;
         float: left;
@@ -276,7 +302,7 @@
     .empireofShadows {
         width: 300px;
         height: 215px;
-        background-color: cadetblue;
+        background-image: url(img/empireofShadows.png);
         margin: 10px;
         transition: transform .3s;
         float: left;
@@ -352,10 +378,16 @@
     .workTitle {
         font-family: 'Roboto', sans-serif;
         font-weight: 400;
-        color: dimgrey;
+        color: white;
         text-align: center;
         margin-top: 30%;
-    }
+        position: relative;
+        z-index: 99;
+        width: 100%;
+        height: auto;
+        pointer-events: none;
+    }    
+
 
 /*footer section*/
     
