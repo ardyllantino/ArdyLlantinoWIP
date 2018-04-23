@@ -679,18 +679,24 @@
 //    Google Maps JS
     
     function myMap() {
-      var myCenter = new google.maps.LatLng(15.689662,120.4143473);
-      var mapCanvas = document.getElementById("map");
-      var mapOptions = {center: myCenter, zoom: 6};
-      var map = new google.maps.Map(mapCanvas, mapOptions);
-      var marker = new google.maps.Marker({position:myCenter});
-      marker.setMap(map);
+        var myCenter = new google.maps.LatLng(15.689662,120.4143473);
+        var mapCanvas = document.getElementById("map");
+        var mapOptions = {center: myCenter, zoom: 6};
+        var map = new google.maps.Map(mapCanvas, mapOptions);
+        var marker = new google.maps.Marker({position:myCenter});
+        marker.setMap(map);
 
-      var infowindow = new google.maps.InfoWindow({
-        content: "I was born here!"
-      });
-      infowindow.open(map,marker);
+        var infowindow = new google.maps.InfoWindow({
+            content: "I was born here!"
+        });
+
+        google.maps.event.addListener(marker,'click',function() {
+        map.setZoom(9);
+        map.setCenter(marker.getPosition());
+        });
+        infowindow.open(map,marker);
 }
+    
 //slideToggle  
 $(document).ready(function(){
     $(".burger").click(function(){
